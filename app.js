@@ -48,3 +48,11 @@ automaticSlide();
 //   }
 //   element.className = arr1.join("");
 // }
+$("skill-per").each(function () {
+  let $this = $(this);
+  var let = $this.attr("per");
+  $this.css("width", per + "%");
+});
+window.addEventListener("load", () => {
+  let;
+});

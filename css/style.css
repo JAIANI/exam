@@ -207,12 +207,9 @@
 .hire-button:hover {
   background: #611825;
 }
-.skils-icon {
-  margin: 50px;
-  text-align: start;
-}
 .icons {
   margin-top: 50px;
+  text-align: center;
 }
 .icons span {
   padding: 10px;
@@ -223,12 +220,103 @@
   background-color: #15263e;
   color: #fff;
 }
-.skils div {
-  padding-bottom: 40px;
+/* MY SKIILS */
+.skills-area {
+  display: flex;
+  flex-direction: column;
 }
-.skils span {
-  color: #e93656;
+
+.skill {
+  width: 300px;
+  position: relative;
+  margin: 20px 40px;
 }
+
+.skill-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+  text-align: start;
+}
+
+.skill-bar {
+  width: 300px;
+  background: rgba(168, 168, 168, 0.6);
+  height: 20px;
+  border-radius: 15px;
+  position: absolute;
+}
+
+.skill-fill {
+  background: blue;
+  height: 20px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  overflow: hidden;
+}
+
+.skill-percent {
+  height: 20px;
+  border-radius: 5px;
+  position: absolute;
+  padding-right: 5px;
+}
+.html {
+  animation: html 5s infinite 5s;
+  width: 50%;
+}
+
+.css {
+  animation: css 5s infinite 5s;
+  width: 80%;
+}
+
+.js {
+  animation: js 5s infinite 5s;
+  width: 60%;
+}
+.bt {
+  animation: bt 5s infinite 5s;
+  width: 80%;
+}
+
+@keyframes html {
+  from {
+    width: 0;
+  }
+  to {
+    width: 50%;
+  }
+}
+
+@keyframes css {
+  from {
+    width: 0;
+  }
+  to {
+    width: 80%;
+  }
+}
+
+@keyframes js {
+  from {
+    width: 0;
+  }
+  to {
+    width: 60%;
+  }
+}
+@keyframes bt {
+  from {
+    width: 0;
+  }
+  to {
+    width: 80%;
+  }
+}
+
+/* სკილი */
 .contact {
   margin-top: 100px;
   height: 150px;
@@ -413,10 +501,55 @@
 
 .all-project {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   text-align: center;
+  margin-left: 20px;
 }
 .project-first {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+}
+.project-img {
+  width: 250px;
+  height: 260px;
+}
+.hide-card {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  margin-top: -200px;
+  display: none;
+}
+
+.card-icons {
+  width: 40px;
+  margin-left: 105px;
+  margin-bottom: 30px;
+  border: 2px solid rgb(236, 12, 87);
+  border-radius: 50%;
+  padding: 8px;
+  backdrop-filter: blur(2px);
+}
+.hide-card span {
+  margin-left: -80px;
+  margin-bottom: 20px;
+  color: white;
+  backdrop-filter: blur(2px);
+}
+.hide-card h1 {
+  backdrop-filter: blur(2px);
+  padding-left: 75px;
+  margin-top: -1px;
+  padding-top: 20px;
+  position: absolute;
+  font-family: "Glacial Indifference-bold", sans-serif;
+}
+.project-card:hover .hide-card {
+  display: block;
+}
+/* .project-first {
   display: flex;
   margin-left: 19px;
   flex-wrap: wrap;
@@ -440,8 +573,8 @@
   margin: 20px;
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-}
+  gap: 10px; */
+
 /*LATEST-ARTICLES */
 .title {
   width: 100%;
