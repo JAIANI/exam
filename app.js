@@ -14,6 +14,27 @@ function automaticSlide() {
 }
 
 automaticSlide();
+
+// sdf
+const liItem = document.querySelectorAll("ul li");
+const imgItem = document.querySelectorAll(".project-img img");
+
+liItem.forEach((li) => {
+  li.onclick = function () {
+    liItem.forEach((li) => {
+      li.className = "";
+    });
+    li.className = "active";
+  };
+  const value = li.textContent;
+  imgItem.forEach((img) => {
+    img.style.display = "none";
+    if (img.getAttribute("data-filter") == value.toLowerCase()) {
+      img.style.display = "block";
+    }
+  });
+});
+
 // filter projects
 // filterProjects("all");
 
@@ -48,3 +69,23 @@ automaticSlide();
 //   }
 //   element.className = arr1.join("");
 // }
+
+function sendEmaile() {
+  Email.send({
+    Host: "sph@gmail.com",
+    Username: "Beqa Jaiani",
+    Password: "Beqa12345@",
+    To: "beqab082@gmail.com",
+    From: document.getElementById("email").value,
+    Subject: "New contact form",
+    Body:
+      "Name: " +
+      document.getElementById("name").value +
+      "<br> Email:" +
+      document.getElementById("email").value +
+      "<br> Website:" +
+      document.getElementById("website").value +
+      "<br> Message:" +
+      document.getElementById("message").value,
+  }).then((message) => alert("Message Sent Succesfully"));
+}

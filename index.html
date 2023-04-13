@@ -214,9 +214,9 @@
     <section class="project"> 
        <h1>Latest Projects</h1>
       <div class="latest-project">
-        <!-- <div class="list">
+      <div class="list">
           <ul>
-            <li>All</li>
+            <li class="active">All</li>
             <li>Work ideas</li>
             <li>Mockup</li>
             <li>PSD Design</li>
@@ -224,8 +224,8 @@
             <li>Presentation</li>
             <li>Icons</li>
           </ul>
-        </div> -->
-        <div id="buttons">
+        </div> 
+        <!-- <div id="buttons">
           <button class="btn" onclick="filterProjects('all')">All</button><br>
           <button class="btn" onclick="filterProjects('Work')">Work ideas</button><br>
           <button class="btn" onclick="filterProects('Mockup')">Mockup</button><br>
@@ -233,18 +233,18 @@
           <button class="btn" onclick="filterProjects('Logo')">Logo</button><br>
          <button class="btn" onclick="filterProjects('Presntation')"> Presentation</button><br>
          <button class="btn " onclick="filterProjects('Icons')">Icons</button><br>
-        </div>
+        </div> -->
       <div class="all-project"> 
 <div class="project-first">
-     <div class="project-card ">
-       <img  class="project-img"src="image/work-ideas.png" alt="work ideas">
+     <div  class="project-card ">
+       <img  class="project-img" src="image/work-ideas.png" data-filter="Work ideas" alt="work ideas">
         <div class="hide-card">
              <img  class="project-icons" src="image/heart.svg" alt="heart">
              <span>7 MONTH AGO</span>
              <h1>work ideas</h1>
         </div> 
     </div>
-    <div class="project-card ">
+    <div data-filter="Mockup" class="project-card ">
       <img  class="project-img" src="image/moc-design.webp" alt="Mockup">
        <div class="hide-card">
             <img  class="project-icons" src="image/heart.svg" alt="heart">
@@ -252,7 +252,7 @@
             <h1>Mockup</h1>
        </div> 
    </div>
-   <div class="project-card ">
+   <div data-filter="PSD" class="project-card ">
     <img  class="project-img" src="image/psd-design.png" alt="PSD">
      <div class="hide-card">
           <img  class="project-icons" src="image/heart.svg" alt="heart">
@@ -265,7 +265,7 @@
 
 
   <div class="project-first">
-    <div class="project-card ">
+    <div data-filter="LOGO" class="project-card ">
       <img  class="project-img" src="image/logo-dev.avif" alt="LOGO">
        <div class="hide-card">
             <img  class="project-icons" src="image/heart.svg" alt="heart">
@@ -273,7 +273,7 @@
             <h1>LOGO</h1>
        </div> 
    </div>
-   <div class="project-card ">
+   <div data-filter="Presentation" class="project-card ">
      <img  class="project-img" src="image/presentation.jpg" alt="Presentation">
       <div class="hide-card">
            <img  class="project-icons" src="image/heart.svg" alt="heart">
@@ -281,7 +281,7 @@
            <h1>Presentation</h1>
       </div> 
   </div>
-  <div class="project-card ">
+  <div data-filter="Icons" class="project-card ">
    <img  class="project-img" src="image/icons-dew.jpg" alt="ICONS">
     <div class="hide-card">
          <img  class="project-icons" src="image/heart.svg" alt="heart">
@@ -446,25 +446,25 @@
       <h1>Contact Us</h1>
       <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
     </div>
-    <form action="#">
+    <form onsubmit="sendEmaile(); reset(); return false;" >
 <div class="user-details">
   <div class="user-info">
   <div class="input-box">
-<input type="text" placeholder="Your Name" required>
+<input type="text" id="name" placeholder="Your Name" required>
   </div>
   <div class="input-box">
-    <input type="email" placeholder="Email Adres" required>
+    <input type="email" id="email" placeholder="Email Adres" required>
       </div>
       <div class="input-box">
-        <input type="text" placeholder="Your Website" required>
+        <input type="text" id="Website" placeholder="Your Website" required>
           </div>
          </div>
           <div class="textarea">
-            <textarea class="field" placeholder="Message" ></textarea>
+            <textarea class="field" id="message" placeholder="Message" ></textarea>
          </div>
 
          <div class="send-btn">
-          <a href="">SEND MESSAGE</a>
+          <button>Send Message</button>
          </div>
 </div>
     </form>
@@ -508,7 +508,7 @@
 
 </footer>
 
-
+ <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="app.js"></script>
   </body>
 </html>
