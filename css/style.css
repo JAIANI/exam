@@ -523,7 +523,7 @@
   display: none;
 }
 
-.card-icons {
+.project-icons {
   width: 40px;
   margin-left: 105px;
   margin-bottom: 30px;
@@ -536,7 +536,6 @@
   margin-left: -80px;
   margin-bottom: 20px;
   color: white;
-  backdrop-filter: blur(2px);
 }
 .hide-card h1 {
   backdrop-filter: blur(2px);
@@ -549,31 +548,6 @@
 .project-card:hover .hide-card {
   display: block;
 }
-/* .project-first {
-  display: flex;
-  margin-left: 19px;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-.project-first div,
-.project-second div {
-  padding-top: 150px;
-  font-size: 30px;
-  color: white;
-  font-family: "Glacial Indifference-regular";
-}
-.all-project .project-first div,
-.project-second div {
-  width: 300px;
-  height: 350px;
-  background-color: #848484;
-  box-shadow: 5px 5px 20px black;
-}
-.all-project .project-second {
-  margin: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px; */
 
 /*LATEST-ARTICLES */
 .title {
